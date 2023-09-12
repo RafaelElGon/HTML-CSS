@@ -1,0 +1,20 @@
+Inline{
+    <p style = "background-color: red"> lorem impsum</p>
+}
+
+Internal{
+    [...] /*above this is normal !doctype generation*/
+    <title> Website title</title>
+    <style>
+
+        body{
+            background-color: blue;
+        }
+        h1{
+            color: yellow;
+        }
+        p{
+            color:bisque;
+        }
+    </style> /*not as used but similar to external styling*/
+}
