@@ -1,12 +1,11 @@
 Inline{
-    <p style = "background-color: red"> lorem impsum</p>
+    <p style = "background-color: red"> lorem ipsum</p>
 }
 
 Internal{
-    [...] /*above this is normal !doctype generation*/
-    <title> Website title</title>
+    [...] <!--above this is a normal !doctype generation-->
+    <title> Cool title</title>
     <style>
-
         body{
             background-color: blue;
         }
@@ -16,5 +15,56 @@ Internal{
         p{
             color:bisque;
         }
-    </style> /*not as used but similar to external styling*/
+    </style> <!--not as used but similar to external styling-->
+}
+
+External{
+    <!--setup another file called style.css (or anything you'd like i guess)
+    and do the same as Internal styling, only that this way you just write the stylings-->
+
+    body{
+        background-color: blue;
+    }
+    h1{
+        color: yellow;
+    }
+    p{
+        color:bisque;
+    }
+}
+
+Coloring and fonts{
+    <!--May be done in these ways V-->[
+        Color{
+            Background-color: color; <!--this affects the background-->
+            color: color; <!--this affects the font color-->
+            
+            <!--These can be done in external or internal styling-->
+        }
+        Fonts{
+            <!--This way you link a font-family by an url, done internally-->
+            <head>
+                <link rel = "stylesheet" href = "FontLinkUrl">
+            </head>
+            
+            <!--And you specify the font name in font-family inside the stylesheet-->
+            font-family: "Font Name","Cool font name", "backup font";
+            font-size: 20px; <!--px or em may be used to determine font size, 1em is 100% font size, i.e. normal font size-->
+            font-weight: bold;
+            font-style: italic;
+
+            <!--you can also link them locally, by downloading the fonts and on the stylesheet do this-->
+            [...]
+            @font-face{
+                src: url(fonts_folder/Font_Name.ttf);
+                font-family: Font_Name;
+            }
+
+            @font-face{
+                src: url(fonts_folder/Really_Big_Font_Name_That's_Annoying_To_Write.ttf);
+                font-family: Smaller_Name; <!-- you can call your font whatever you like at this step-->
+            }
+            [...]
+        }
+    ]
 }

@@ -1,10 +1,31 @@
+@font-face{
+    src: url(Fonts/Lato-Regular.ttf);
+    font-family: Lato;
+}
+@font-face{
+    src: url(Fonts/WorkSans-Regular.ttf);
+    font-family: WorkSans;
+}
+
+body{
+    background-color:rgb(147, 103, 149);
+}
+
 h1{
-    font-family: verdana, "courier new";
+    background-color:cadetblue;
+    color:powderblue;
+    font-family: "Lato",verdana, "courier new";
+}
+pre{
+    background-color:darkgray;
+    color:bisque;
+    font-size:16px;
 }
 p{
-    
-    font-family: "lucida console", "arial";
-    font-size: 15px;
+    color:orchid;
+    background-color:cornsilk;
+    font-family: "Work Sans","lucida console", "arial";
+    font-size: 20px; /*px or em may be used to determine font size, 1em is 100% font size, i.e. normal font size*/
     font-weight: bold;
     font-style: italic;
 }   
